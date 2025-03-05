@@ -4,9 +4,17 @@ class StatefulGreeting extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      instruction: "Hello, I am a Stateful Component!", 
+      introduction: "Hello, I am a Stateful Component!", 
       buttonText: "Exit"
-    }
+    };
+  }
+  handleClick(){
+    this.state({
+      introduction: "Goodbye!",
+    });
+    
+    console.log(this.state.introduction);
+
   }
 
   render(){
@@ -15,7 +23,7 @@ class StatefulGreeting extends React.Component {
         <h1>
           {this.state.introduction} {this.props.greeting}
         </h1>
-        <button>{this.state.buttonText}</button>
+        <button onClick={() => this.handleClick()}> {this.state.buttonText}</button>
       </div>
     ); 
   }

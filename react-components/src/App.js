@@ -4,10 +4,9 @@ import StatefulGreeting from "./components/StatefulGreeting";
 function App() {
   return (
     <div className="App">
-      < StatefulGreeting greeting="Hello"/>  
+      < StatefulGreeting/>  
     </div>
   );
 }
 
 export default App;
-  
